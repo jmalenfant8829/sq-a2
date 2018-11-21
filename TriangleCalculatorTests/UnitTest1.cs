@@ -5,7 +5,7 @@ using TriangleCalculator;
 namespace TriangleCalculatorTests
 {
     [TestClass]
-    public class UnitTest1
+    public class TriangleTester
     {
 
         [TestMethod]
@@ -118,5 +118,21 @@ namespace TriangleCalculatorTests
             Assert.AreEqual(hyp, funcHyp);
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Should_Throw_Exception_When_Hypotenuse_Calc_Side_Is_Negative()
+        {
+            Triangle tri = new Triangle();
+
+            double side1 = -2;
+            double side2 = -2;
+
+            double hypArea = 0;
+
+            //Act
+            hypArea = tri.calcAreaOfRightTri(side1, side2);
+
+            //Assert already handled
+        }
     }
 }
