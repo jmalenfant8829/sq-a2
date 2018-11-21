@@ -39,6 +39,5 @@ namespace TriangleCalculator
             int finalAngle = TRIANGLE_ANGLE_SUM - angle1 - angle2;
             return finalAngle;
         }
-
     }
 }

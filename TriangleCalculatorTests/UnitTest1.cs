@@ -98,5 +98,24 @@ namespace TriangleCalculatorTests
 
             //Assert already handled
         }
+
+        [TestMethod]
+        public void Should_Calc_Hypotenuse_Of_Tri_Given_Two_Valid_Sides()
+        {
+            //Arrange
+            Triangle tri = new Triangle();
+
+            double side1 = 3;
+            double side2 = 4;
+            double hyp = 5;
+
+            double funcHyp = 0;
+
+            //Act
+            funcHyp = tri.calcAreaOfRightTri(side1, side2);
+
+            //Assert
+            Assert.AreEqual(hyp, funcHyp);
+        }
     }
 }
