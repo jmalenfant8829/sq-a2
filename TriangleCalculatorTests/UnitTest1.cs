@@ -27,5 +27,6 @@ namespace TriangleCalculatorTests
             Assert.AreEqual(finalAngle, testAngle);
         }
 
+
     }
 }
