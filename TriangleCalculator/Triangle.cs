@@ -8,6 +8,8 @@ namespace TriangleCalculator
 {
     public class Triangle
     {
+        //Sum of triangle's angles
+        private const int TRIANGLE_ANGLE_SUM = 180;
 
         public double calcHypOfRightTri(int side1, int side2)
         {
@@ -21,7 +23,8 @@ namespace TriangleCalculator
 
         public int calcAngleOfTri(int angle1, int angle2)
         {
-            return 0;
+            int finalAngle = TRIANGLE_ANGLE_SUM - angle1 - angle2;
+            return finalAngle;
         }
     }
 }
