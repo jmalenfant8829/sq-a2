@@ -13,6 +13,10 @@ namespace TriangleCalculator
 
         public double calcHypOfRightTri(double side1, double side2)
         {
+            if (side1 <= 0 || side2 <= 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
             double hyp = Math.Sqrt((side1 * side1) + (side2 * side2));
             return hyp;
         }

@@ -130,7 +130,7 @@ namespace TriangleCalculatorTests
             double hypArea = 0;
 
             //Act
-            hypArea = tri.calcAreaOfRightTri(side1, side2);
+            hypArea = tri.calcHypOfRightTri(side1, side2);
 
             //Assert already handled
         }
