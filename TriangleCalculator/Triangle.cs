@@ -18,6 +18,7 @@ namespace TriangleCalculator
 
         public double calcAreaOfRightTri(double side1, double side2)
         {
+            double area = (side1 + side2) / 2;
             return 0;
         }
 
