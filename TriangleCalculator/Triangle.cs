@@ -27,6 +27,10 @@ namespace TriangleCalculator
             {
                 throw new ArgumentOutOfRangeException();
             }
+            else if (angle1 + angle2 >= TRIANGLE_ANGLE_SUM)
+            {
+                throw new ArithmeticException();
+            }
             int finalAngle = TRIANGLE_ANGLE_SUM - angle1 - angle2;
             return finalAngle;
         }
