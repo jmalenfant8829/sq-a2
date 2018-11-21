@@ -62,5 +62,24 @@ namespace TriangleCalculatorTests
 
             //Assert already handled
         }
+
+        [TestMethod]
+        public void Should_Calc_Area_Of_Tri_Given_Two_Valid_Sides()
+        {
+            //Arrange
+            Triangle tri = new Triangle();
+
+            double side1 = 4;
+            double side2 = 6;
+            double area = 12;
+
+            double funcArea = 0;
+
+            //Act
+            funcArea = tri.calcAreaOfRightTri(side1, side2);
+
+            //Assert
+            Assert.AreEqual(area, funcArea);
+        }
     }
 }

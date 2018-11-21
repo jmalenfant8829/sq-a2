@@ -11,12 +11,12 @@ namespace TriangleCalculator
         //Sum of triangle's angles
         private const int TRIANGLE_ANGLE_SUM = 180;
 
-        public double calcHypOfRightTri(int side1, int side2)
+        public double calcHypOfRightTri(double side1, double side2)
         {
             return 0;
         }
 
-        public double calcAreaOfRightTri(int side1, int side2)
+        public double calcAreaOfRightTri(double side1, double side2)
         {
             return 0;
         }
