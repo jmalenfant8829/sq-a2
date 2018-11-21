@@ -27,6 +27,23 @@ namespace TriangleCalculatorTests
             Assert.AreEqual(finalAngle, testAngle);
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Should_Throw_Exception_When_Angle_Is_Negative()
+        {
+            //Arrange
+            Triangle tri = new Triangle();
+
+            int angle1 = -30;
+            int angle2 = -30;
+
+            int testAngle = 0;
+
+            //Act
+            testAngle = tri.calcAngleOfTri(angle1, angle2);
+
+            //Assert already handled
+        }
 
     }
 }
