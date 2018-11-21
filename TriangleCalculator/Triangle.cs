@@ -18,6 +18,10 @@ namespace TriangleCalculator
 
         public double calcAreaOfRightTri(double side1, double side2)
         {
+            if (side1 <= 0 || side2 <= 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
             double area = (side1 * side2) / 2;
             return area;
         }
