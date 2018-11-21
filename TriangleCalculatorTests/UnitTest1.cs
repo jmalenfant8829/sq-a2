@@ -117,5 +117,6 @@ namespace TriangleCalculatorTests
             //Assert
             Assert.AreEqual(hyp, funcHyp);
         }
+
     }
 }
