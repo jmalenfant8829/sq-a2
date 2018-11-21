@@ -45,6 +45,22 @@ namespace TriangleCalculatorTests
             //Assert already handled
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Should_Throw_Exception_When_Sum_Of_Angles_Over_180()
+        {
+            //Arrange
+            Triangle tri = new Triangle();
 
+            int angle1 = 100;
+            int angle2 = 100;
+
+            int testAngle = 0;
+
+            //Act
+            testAngle = tri.calcAngleOfTri(angle1, angle2);
+
+            //Assert already handled
+        }
     }
 }
