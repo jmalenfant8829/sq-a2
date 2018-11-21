@@ -7,13 +7,6 @@ namespace TriangleCalculatorTests
     [TestClass]
     public class UnitTest1
     {
-        [TestMethod]
-        public void Test_Existence()
-        {
-            //Arrange
-            //Act
-            //Assert
-        }
 
         [TestMethod]
         public void Should_Calculate_Angle_From_Two_Valid_Sides()
@@ -33,5 +26,6 @@ namespace TriangleCalculatorTests
             //Assert
             Assert.AreEqual(finalAngle, testAngle);
         }
+
     }
 }
