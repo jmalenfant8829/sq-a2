@@ -81,5 +81,22 @@ namespace TriangleCalculatorTests
             //Assert
             Assert.AreEqual(area, funcArea);
         }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Should_Throw_Exception_When_Area_Calc_Side_Is_Negative()
+        {
+            Triangle tri = new Triangle();
+
+            double side1 = -2;
+            double side2 = -2;
+
+            double funcArea = 0;
+
+            //Act
+            funcArea = tri.calcAreaOfRightTri(side1, side2);
+
+            //Assert already handled
+        }
     }
 }
