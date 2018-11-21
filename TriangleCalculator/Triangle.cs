@@ -23,6 +23,10 @@ namespace TriangleCalculator
 
         public int calcAngleOfTri(int angle1, int angle2)
         {
+            if (angle1 <= 0 || angle2 <= 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
             int finalAngle = TRIANGLE_ANGLE_SUM - angle1 - angle2;
             return finalAngle;
         }
