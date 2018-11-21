@@ -112,7 +112,7 @@ namespace TriangleCalculatorTests
             double funcHyp = 0;
 
             //Act
-            funcHyp = tri.calcAreaOfRightTri(side1, side2);
+            funcHyp = tri.calcHypOfRightTri(side1, side2);
 
             //Assert
             Assert.AreEqual(hyp, funcHyp);

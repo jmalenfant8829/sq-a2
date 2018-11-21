@@ -13,7 +13,8 @@ namespace TriangleCalculator
 
         public double calcHypOfRightTri(double side1, double side2)
         {
-            return 0;
+            double hyp = Math.Sqrt((side1 * side1) + (side2 * side2));
+            return hyp;
         }
 
         public double calcAreaOfRightTri(double side1, double side2)
