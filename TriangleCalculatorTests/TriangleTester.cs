@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+FILE:          TriangleTester.cs
+PROJECT:       INFO2180 Assignment 2
+PROGRAMMER:    Julien Malenfant
+FIRST VERSION: 20/11/2018
+DESCRIPTION:   Unit tests triangle calculation functions
+*/
+
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TriangleCalculator;
 
@@ -7,7 +15,9 @@ namespace TriangleCalculatorTests
     [TestClass]
     public class TriangleTester
     {
-
+        /// <summary>
+        /// Functional test of angle calculation (two valid angles)
+        /// </summary>
         [TestMethod]
         public void Should_Calculate_Angle_From_Two_Valid_Sides()
         {
@@ -27,6 +37,9 @@ namespace TriangleCalculatorTests
             Assert.AreEqual(finalAngle, testAngle);
         }
 
+        /// <summary>
+        /// Exception tests angle calculation (one or more angles are 0 or negative)
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Should_Throw_Exception_When_Angle_Is_Negative()
@@ -45,6 +58,9 @@ namespace TriangleCalculatorTests
             //Assert already handled
         }
 
+        /// <summary>
+        /// Exception tests angle calculation (sum of angles over 180)
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void Should_Throw_Exception_When_Sum_Of_Angles_Over_180()
@@ -63,6 +79,9 @@ namespace TriangleCalculatorTests
             //Assert already handled
         }
 
+        /// <summary>
+        /// Functional test of area calculation (two valid sides)
+        /// </summary>
         [TestMethod]
         public void Should_Calc_Area_Of_Tri_Given_Two_Valid_Sides()
         {
@@ -82,6 +101,9 @@ namespace TriangleCalculatorTests
             Assert.AreEqual(area, funcArea);
         }
 
+        /// <summary>
+        /// Exception tests area calculation (one or more sides are 0 or negative)
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Should_Throw_Exception_When_Area_Calc_Side_Is_Negative()
@@ -99,6 +121,9 @@ namespace TriangleCalculatorTests
             //Assert already handled
         }
 
+        /// <summary>
+        /// Functional test of hypotenuse calculation (two valid sides)
+        /// </summary>
         [TestMethod]
         public void Should_Calc_Hypotenuse_Of_Tri_Given_Two_Valid_Sides()
         {
@@ -118,6 +143,9 @@ namespace TriangleCalculatorTests
             Assert.AreEqual(hyp, funcHyp);
         }
 
+        /// <summary>
+        /// Exception tests hypotenuse calculation (one or more sides are 0 or negative)
+        /// </summary>
         [TestMethod]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Should_Throw_Exception_When_Hypotenuse_Calc_Side_Is_Negative()
