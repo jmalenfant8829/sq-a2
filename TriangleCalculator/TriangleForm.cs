@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+FILE:          TriangleForm.cs
+PROJECT:       INFO2180 Assignment 2
+PROGRAMMER:    Julien Malenfant
+FIRST VERSION: 20/11/2018
+DESCRIPTION:   Holds form functionality
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +25,18 @@ namespace TriangleCalculator
             InitializeComponent();
         }
 
+        /// <summary>
+        /// If I delete this, it yells at me - tried for a while and didn't want to keep wasting time.
+        /// Please disregard the method.
+        /// </summary>
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
+        /// <summary>
+        /// Takes user textbox side input to calculate the hypotenuse of a right triangle
+        /// </summary>
         private void calcRightTriBtn_Click(object sender, EventArgs e)
         {
             Triangle tri = new Triangle();
@@ -58,6 +73,9 @@ namespace TriangleCalculator
             areaBox.Text = area.ToString();
         }
 
+        /// <summary>
+        /// Takes user textbox angle input to calculate the third angle of a triangle
+        /// </summary>
         private void calcAngleBtn_Click(object sender, EventArgs e)
         {
             Triangle tri = new Triangle();
@@ -92,6 +110,10 @@ namespace TriangleCalculator
             angleResultbox.Text = angle3.ToString();
         }
 
+        /// <summary>
+        /// If I delete this, it yells at me - tried for a while and didn't want to keep wasting time.
+        /// Please disregard the method.
+        /// </summary>
         private void errRightTriLbl_Click(object sender, EventArgs e)
         {
 
