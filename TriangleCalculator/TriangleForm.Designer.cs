@@ -39,6 +39,8 @@
             this.calcAngleBtn = new System.Windows.Forms.Button();
             this.rightTriCalcLbl = new System.Windows.Forms.Label();
             this.calcAngleLbl = new System.Windows.Forms.Label();
+            this.errRightTriLbl = new System.Windows.Forms.Label();
+            this.errAngleLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // calcRightTriBtn
@@ -49,6 +51,7 @@
             this.calcRightTriBtn.TabIndex = 0;
             this.calcRightTriBtn.Text = "Submit";
             this.calcRightTriBtn.UseVisualStyleBackColor = true;
+            this.calcRightTriBtn.Click += new System.EventHandler(this.calcRightTriBtn_Click);
             // 
             // side2Box
             // 
@@ -110,6 +113,7 @@
             this.calcAngleBtn.TabIndex = 9;
             this.calcAngleBtn.Text = "Submit";
             this.calcAngleBtn.UseVisualStyleBackColor = true;
+            this.calcAngleBtn.Click += new System.EventHandler(this.calcAngleBtn_Click);
             // 
             // rightTriCalcLbl
             // 
@@ -132,11 +136,34 @@
             this.calcAngleLbl.Text = "Enter numbers to calculate third angle";
             this.calcAngleLbl.Click += new System.EventHandler(this.label1_Click);
             // 
+            // errRightTriLbl
+            // 
+            this.errRightTriLbl.AutoSize = true;
+            this.errRightTriLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errRightTriLbl.ForeColor = System.Drawing.Color.Red;
+            this.errRightTriLbl.Location = new System.Drawing.Point(86, 184);
+            this.errRightTriLbl.Name = "errRightTriLbl";
+            this.errRightTriLbl.Size = new System.Drawing.Size(0, 18);
+            this.errRightTriLbl.TabIndex = 12;
+            this.errRightTriLbl.Click += new System.EventHandler(this.errRightTriLbl_Click);
+            // 
+            // errAngleLbl
+            // 
+            this.errAngleLbl.AutoSize = true;
+            this.errAngleLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errAngleLbl.ForeColor = System.Drawing.Color.Red;
+            this.errAngleLbl.Location = new System.Drawing.Point(86, 403);
+            this.errAngleLbl.Name = "errAngleLbl";
+            this.errAngleLbl.Size = new System.Drawing.Size(0, 18);
+            this.errAngleLbl.TabIndex = 13;
+            // 
             // TriangleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.errAngleLbl);
+            this.Controls.Add(this.errRightTriLbl);
             this.Controls.Add(this.calcAngleLbl);
             this.Controls.Add(this.rightTriCalcLbl);
             this.Controls.Add(this.calcAngleBtn);
@@ -168,6 +195,8 @@
         private System.Windows.Forms.Button calcAngleBtn;
         private System.Windows.Forms.Label rightTriCalcLbl;
         private System.Windows.Forms.Label calcAngleLbl;
+        private System.Windows.Forms.Label errRightTriLbl;
+        private System.Windows.Forms.Label errAngleLbl;
     }
 }
 
